@@ -4,9 +4,9 @@ import (
 	"log"
 	"time"
 
+	"charm.land/lipgloss/v2"
 	"github.com/charmbracelet/bubbles/list"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/charmbracelet/lipgloss"
 	"github.com/ethanefung/bubble-datepicker"
 )
 

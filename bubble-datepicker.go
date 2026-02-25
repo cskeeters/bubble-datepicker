@@ -8,9 +8,9 @@ import (
 	"strings"
 	"time"
 
+	"charm.land/lipgloss/v2"
 	"github.com/charmbracelet/bubbles/key"
 	tea "github.com/charmbracelet/bubbletea"
-	"github.com/charmbracelet/lipgloss"
 )
 
 // Focus is a value passed to `model.SetFocus` to indicate what component
@@ -76,14 +76,13 @@ type Styles struct {
 // DefaultStyles returns a default `Styles` struct
 func DefaultStyles() Styles {
 	// TODO: refactor for adaptive colors
-	r := lipgloss.DefaultRenderer()
 	return Styles{
-		Header:       r.NewStyle().Padding(1, 0, 0),
-		Date:         r.NewStyle().Padding(0, 1, 1),
-		HeaderText:   r.NewStyle().Bold(true),
-		Text:         r.NewStyle().Foreground(lipgloss.Color("247")),
-		SelectedText: r.NewStyle().Bold(true),
-		FocusedText:  r.NewStyle().Foreground(lipgloss.Color("212")).Bold(true),
+		Header:       lipgloss.NewStyle().Padding(1, 0, 0),
+		Date:         lipgloss.NewStyle().Padding(0, 1, 1),
+		HeaderText:   lipgloss.NewStyle().Bold(true),
+		Text:         lipgloss.NewStyle().Foreground(lipgloss.Color("247")),
+		SelectedText: lipgloss.NewStyle().Bold(true),
+		FocusedText:  lipgloss.NewStyle().Foreground(lipgloss.Color("212")).Bold(true),
 	}
 }
 
